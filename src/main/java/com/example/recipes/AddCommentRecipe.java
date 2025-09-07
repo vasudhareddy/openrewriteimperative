@@ -9,7 +9,7 @@ import org.openrewrite.java.tree.J;
 import org.openrewrite.java.tree.Space;
 import org.openrewrite.marker.Markers;
 
-import java.util.Collections;// Added by AddCommentRecipe
+import java.util.Collections;
 
 
 
