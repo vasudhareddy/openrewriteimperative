@@ -1,0 +1,39 @@
+# Gradle build output
+/build/
+.gradle/
+out/
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# Generated files
+bin/
+target/
+
+# Local properties
+gradle-app.setting
+local.properties
+
+# Dependency caches
+.gradle/
+.gradle-cache/
+
+# Ignore wrapper jar (optional if you want teammates to download fresh)
+gradle/wrapper/gradle-wrapper.jar
