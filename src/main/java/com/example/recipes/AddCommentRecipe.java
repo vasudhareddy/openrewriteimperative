@@ -1,19 +1,18 @@
 package com.example.recipes;
 
-import com.google.auto.service.AutoService;
+//import com.google.auto.service.AutoService;
 import org.openrewrite.ExecutionContext;
 import org.openrewrite.Recipe;
 import org.openrewrite.TreeVisitor;
 import org.openrewrite.java.JavaIsoVisitor;
 import org.openrewrite.java.tree.J;
 import org.openrewrite.java.tree.Space;
-import org.openrewrite.marker.Markers;
 
-import java.util.Collections;
-
+import java.util.Collections;// Added by AddCommentRecipe
 
 
-@AutoService(Recipe.class)
+
+
 public class AddCommentRecipe extends Recipe {
 
     @Override

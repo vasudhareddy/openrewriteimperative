@@ -7,6 +7,10 @@ recipeList:
   # ---- Built-in recipes (examples) ----
 
   - org.openrewrite.java.RemoveUnusedImports
-
+  - org.openrewrite.staticanalysis.UseDiamondOperator
+  - org.openrewrite.staticanalysis.StringLiteralEquality
+  - org.openrewrite.staticanalysis.EqualsAvoidsNull
   # ---- Your custom recipe ----
   - com.example.recipes.AddCommentRecipe
+  - com.example.recipes.GuardClauseReturnRecipe
+#  - com.example.recipes.StringLiteralEqualityRecipe

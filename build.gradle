@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.openrewrite.rewrite' version '7.14.0'
+    id 'org.openrewrite.rewrite' version '7.13.0'
 }
 
 repositories {
@@ -13,25 +13,22 @@ java {
     }
 }
 
-configurations {
-    // Ensure there's a 'rewrite' configuration we can add our own classes to
-    rewrite
-}
 
 dependencies {
     implementation platform('org.openrewrite:rewrite-bom:8.60.1')
     implementation 'org.openrewrite:rewrite-core'
     implementation 'org.openrewrite:rewrite-java'
+    rewrite("org.openrewrite.recipe:rewrite-static-analysis:2.16.0")
 
     // Discover the custom recipe in THIS project by adding compiled classes/resources
     // to the 'rewrite' configuration that the plugin scans.
     rewrite sourceSets.main.output
 
     // AutoService (optional; we still keep the services file too)
-    annotationProcessor 'com.google.auto.service:auto-service:1.1.1'
-    compileOnly 'com.google.auto.service:auto-service-annotations:1.1.1'
-
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+//    annotationProcessor 'com.google.auto.service:auto-service:1.1.1'
+//    compileOnly 'com.google.auto.service:auto-service-annotations:1.1.1'
+//
+//    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
 }
 
 rewrite {
@@ -41,8 +38,9 @@ rewrite {
     // activate the recipe defined inside rewrite.yml
     activeRecipe('com.example.bundle.MyStack')
 //    activeRecipe('com.example.recipes.AddCommentRecipe')
+    exclusion('**/recipes/**')
 }
 
-tasks.withType(Test).configureEach {
+tasks.withType(Test).configureEach  {
     useJUnitPlatform()
 }
