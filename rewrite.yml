@@ -1,0 +1,12 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: com.example.bundle.MyStack
+displayName: My built-in + custom stack
+description: Runs some built-in cleanup plus our AddCommentRecipe.
+
+recipeList:
+  # ---- Built-in recipes (examples) ----
+
+  - org.openrewrite.java.RemoveUnusedImports
+
+  # ---- Your custom recipe ----
+  - com.example.recipes.AddCommentRecipe

@@ -35,7 +35,12 @@ dependencies {
 }
 
 rewrite {
-    activeRecipe('com.example.recipes.AddCommentRecipe')
+    // tell the plugin where rewrite.yml is
+    configFile = file('rewrite.yml')
+
+    // activate the recipe defined inside rewrite.yml
+    activeRecipe('com.example.bundle.MyStack')
+//    activeRecipe('com.example.recipes.AddCommentRecipe')
 }
 
 tasks.withType(Test).configureEach {
