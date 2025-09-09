@@ -5,11 +5,16 @@ description: Runs some built-in cleanup plus our AddCommentRecipe.
 
 recipeList:
   # ---- Built-in recipes (examples) ----
-
-  - org.openrewrite.java.RemoveUnusedImports
-  - org.openrewrite.staticanalysis.UseDiamondOperator
-  - org.openrewrite.staticanalysis.StringLiteralEquality
-  - org.openrewrite.staticanalysis.EqualsAvoidsNull
-  # ---- Your custom recipe ----
-  - com.example.recipes.AddCommentRecipe
-  - com.example.recipes.ExtractMagicNumbersRecipe
+    - org.openrewrite.java.RemoveUnusedImports
+    - org.openrewrite.staticanalysis.UseDiamondOperator
+    - org.openrewrite.staticanalysis.StringLiteralEquality
+    - org.openrewrite.staticanalysis.EqualsAvoidsNull
+    - org.openrewrite.staticanalysis.HideUtilityClassConstructor
+    - org.openrewrite.staticanalysis.NeedBraces
+    - org.openrewrite.staticanalysis.RemoveUnusedPrivateFields
+    - org.openrewrite.staticanalysis.RemoveUnusedPrivateFields
+    - org.openrewrite.staticanalysis.RemoveUnusedLocalVariables
+    - org.openrewrite.staticanalysis.RemoveUnusedParameters
+    - org.openrewrite.java.RemoveCommentedCode
+     # ---- Your custom recipe ----
+     - com.example.recipes.ExtractMagicNumbersRecipe
