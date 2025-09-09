@@ -19,8 +19,6 @@ public class StringLiteralIssue {
 
 
         {
-        String input = "bar";
-        Map<String,String> map = new HashMap<>();
         map.put("foo", "value1");
         map.put("bar", "value2");
 
@@ -43,8 +41,6 @@ public class StringLiteralIssue {
 
         // Another example
         {
-        String input = "bar";
-        Map<String,String> map = new HashMap<>();
         map.put("foo", "value1");
         map.put("bar", "value2");
 
