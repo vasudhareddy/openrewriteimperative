@@ -13,5 +13,3 @@ recipeList:
   # ---- Your custom recipe ----
   - com.example.recipes.AddCommentRecipe
   - com.example.recipes.ExtractMagicNumbersRecipe
-#  - com.example.recipes.GuardClauseReturnRecipe
-#  - com.example.recipes.StringLiteralEqualityRecipe
